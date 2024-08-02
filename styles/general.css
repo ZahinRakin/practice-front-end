@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "Figtree";
+  src: url("../fonts/Figtree-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 700;
+  font-style: normal;
+}
+
+body {
+  font-family: "Figtree";
+  line-height: 150%;
+  background-color: #F4D04E;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  font-size: clamp(14px, 2vw, 16px);
+  /* font-size: max(2vw, 14px);
+  font-size: min(2vw, 16px); is there a way to do the same thing in css */
+}
+
+h2 {
+  font-weight: 700;
+}
+
+/* .godown {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+} */
+
+.container {
+  background-color: white;
+  border: 1px solid #111111;
+  border-radius: 18px;
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 24px;
+  width: 384px;
+  padding: 24px;
+  box-sizing: border-box;
+  box-shadow: 8px 8px 1px #111111;
+}
+
+.article-img {
+  border-radius: 12px;
+  height: 200px;
+}
+
+.profile-sec {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.profile-pic {
+  height: 32px;
+}
+.texts span:first-child {
+  display: inline-block;
+  border-radius: 3px;
+  padding: 3px 10px;
+  background-color: #F4D04E;
+  font-weight: bold;
+}
+.texts span:nth-child(2) {
+  display: block;
+  margin-top: 10px;
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.texts p{
+  margin-bottom: 0;
+  color: #6B6B6B;
+}
+.title:hover,
+.title:active,
+.title:focus {
+  color: #F4D04E;
+  cursor: pointer;
+}
+
+
+
+.profile-pic + span {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+@media (width < 600px) {
+  .container {
+    width: 327px;
+  }
+
+  .article-img {
+    height: 200px;
+    width: 100%;
+    /* border-radius: ; */
+  }
+}
